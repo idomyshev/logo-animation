@@ -6,6 +6,9 @@
       <img v-if="false" src="@/assets/logo/logo-compose-exact.svg" />
       <img v-if="false" src="@/assets/logo/logo-sync-exact.svg" />
     </div>
+    <div class="animation-container animation-second">
+      <img src="@/assets/logo/logo-occasions-graph-exact.svg" />
+    </div>
   </div>
 </template>
 <script>
@@ -28,16 +31,20 @@ export default {
   overflow: hidden;
 }
 .animation-container {
-  //background: red;
-  display: block;
+  opacity: 0;
   width: 400px;
   animation-name: fadeInFromNone;
   animation-duration: 1.8s;
   animation-direction: normal;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.animation-second {
+  animation-delay: 1.62s;
 }
 @keyframes fadeInFromNone {
   0% {
+    display: block;
     opacity: 0;
     margin-top: 0;
   }
@@ -52,6 +59,7 @@ export default {
   100% {
     opacity: 0;
     margin-top: -200px;
+    display: none;
   }
 }
 </style>
