@@ -2,12 +2,16 @@
   <div class="d-flex justify-center main-container">
     <div class="animation-container">
       <img src="@/assets/logo/logo-choreograph-exact.svg" />
-      <img v-if="false" src="@/assets/logo/logo-occasions-graph-exact.svg" />
-      <img v-if="false" src="@/assets/logo/logo-compose-exact.svg" />
       <img v-if="false" src="@/assets/logo/logo-sync-exact.svg" />
     </div>
     <div class="animation-container animation-second">
       <img src="@/assets/logo/logo-occasions-graph-exact.svg" />
+    </div>
+    <div class="animation-container animation-third">
+      <img src="@/assets/logo/logo-compose-exact.svg" />
+    </div>
+    <div class="animation-container animation-fourth">
+      <img src="@/assets/logo/logo-sync-exact.svg" />
     </div>
   </div>
 </template>
@@ -27,7 +31,6 @@ export default {
 <style lang="scss" scoped>
 .main-container {
   margin-top: 300px;
-  position: relative;
   overflow: hidden;
 }
 .animation-container {
@@ -41,6 +44,15 @@ export default {
 }
 .animation-second {
   animation-delay: 1.62s;
+  margin-left: -400px;
+}
+.animation-third {
+  animation-delay: 3.24s;
+  margin-left: -400px;
+}
+.animation-fourth {
+  animation-delay: 4.86s;
+  margin-left: -400px;
 }
 @keyframes fadeInFromNone {
   0% {
